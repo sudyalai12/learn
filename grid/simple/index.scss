@@ -1,0 +1,69 @@
+// import the Nunito Sans google font
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+// set all elements to have no margin or padding, use the border box model, and the Nunito Sans font
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+// define the .flexbox class which contains a .row class which contains .col classes
+.flexbox {
+  // define the .row class
+  .row {
+    // set the display to flex to make the elements flex items
+    display: flex;
+
+    // center the elements horizontally
+    justify-content: center;
+
+    // center the elements vertically
+    align-items: center;
+
+    // allow the elements to wrap to a new line if there is not enough space on the current line
+    flex-wrap: wrap;
+
+    // set the gap between the elements to 2px
+    gap: 2px;
+
+    // define the .col class
+    .col {
+      // set the background color to blue
+      background-color: blue;
+
+      // set the padding to 10px
+      padding: 10px;
+
+      // set the flex basis to 200px, so that the elements will be at least 200px wide
+      // and set the flex-grow and flex-shrink properties to 1 so that the elements will grow and shrink equally
+      flex: 1 1 200px;
+    }
+  }
+}
+
+// define the .grid class which contains a .row class which contains .col classes
+.grid {
+  // define the .row class
+  .row {
+    // set the display to grid to make the elements grid items
+    display: grid;
+
+    // set the template columns to repeat an auto-fit number of columns with a minimum width of 200px and a maximum width of 1fr
+    // this means that the browser will automatically determine the number of columns based on the available space
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    // set the gap between the elements to 2px
+    gap: 2px;
+  }
+
+  // define the .col class
+  .col {
+    // set the background color to blue
+    background-color: blue;
+
+    // set the padding to 10px
+    padding: 10px;
+  }
+}

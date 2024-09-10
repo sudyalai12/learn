@@ -1,0 +1,43 @@
+// import the Nunito Sans google font
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+// set all elements to have no margin or padding, use the border box model, and the Nunito Sans font
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.navbar{
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo{
+    font-size: 2rem;
+  }
+  .menu{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    .menu-link{
+      text-decoration: none;
+      background-color: #cec8c8;
+      padding: 2px 6px;
+    }
+  }
+  .menu-toggle{
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 600px){
+  #topnav{
+    // display: none;
+  }
+  .menu{
+    display: flex;
+    flex-direction: column;
+  }
+}
