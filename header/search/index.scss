@@ -17,11 +17,18 @@ a {
 ul {
   list-style: none;
 }
-
+// header with active class
+header.active{
+  padding: 2px;
+  background-color: gainsboro;
+}
 header {
   position: fixed;
+  top: 0;
   width: 100%;
-  background-color: gainsboro;
+  padding: 10px 2px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
   .navtoggle {
     display: none;
   }
@@ -30,7 +37,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    flex-wrap: wrap;
+
     .navlogo {
       font-size: 1.5rem;
     }
@@ -101,6 +109,31 @@ header {
     }
   }
 }
+main {
+  margin-top: 5rem;
+}
+
+.search-box {
+  width: 100%;
+  background-color: white;
+}
+
+.searchform {
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+
+  input {
+    flex: 1;
+    padding: 2px;
+    border: none;
+  }
+
+  button {
+    padding: 2px 6px;
+    background-color: gainsboro;
+    border: none;
+  }
+}
 
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
@@ -119,12 +152,19 @@ header {
       position: static !important;
       display: flex;
       flex-direction: row !important;
+      justify-content: flex-end;
       width: auto !important;
+      flex: 1;
+      background-color: transparent !important;
 
       .navlink {
         padding: 0 8px;
       }
     }
+  }
+
+  .search-box {
+    width: auto;
   }
 }
 @media (min-width: 961px) {
